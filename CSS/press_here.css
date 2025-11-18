@@ -1,0 +1,52 @@
+
+#price {
+    text-align: center;
+    font-size: 2.2em; 
+    color: #333; 
+    margin-top: 50px;
+    margin-bottom: 30px; 
+}
+
+/* -------------------------------------- */
+/* ======== הכפתור "לחצו כאן" ======== */
+/* -------------------------------------- */
+.price-link {
+    display: inline-block; 
+    padding: 10px 25px;
+    border-radius: 25px; 
+    text-decoration: none; 
+    font-size: 1em; 
+    font-weight: 600; 
+    cursor: pointer;
+    transition: all 0.3s ease; 
+    
+    
+    background-color: #ac9433; 
+    color: #ffffff !important; 
+    
+    border: none; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    margin-right: 10px; 
+}
+
+.price-link:hover {
+    background-color: #bb9c3e; 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px); 
+    color: #ffffff !important; 
+}
+
+.price-link:active {
+    background-color: #9a862b; 
+    transform: translateY(0); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    color: #ffffff !important;
+}
+
+
+h2 a:hover {
+    color: #1893c8; 
+}
+h2 a:active {
+    color: #1893c8;
+}

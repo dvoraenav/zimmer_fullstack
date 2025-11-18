@@ -1,0 +1,154 @@
+
+.navbar {
+    background-color: rgb(153, 130, 53); 
+    width: 100%;
+    height: 100px; 
+    margin: 0; 
+    padding: 0; 
+    box-shadow: 0 10px 10px rgb(153, 130, 53);
+    z-index: 1000; 
+    position: fixed; 
+    top: 0; 
+}
+
+
+ul {
+    list-style-type: none;
+    padding: 0; 
+    height: 100%;
+    
+    /* פריסת הקישורים בשורה */
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center; 
+    margin: 0;
+}
+
+ul li {
+    display: flex; 
+    align-items: center;
+    margin: 0 15px; 
+}
+
+
+#nav_link {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15); 
+}
+
+#nav_link:hover {
+    color: #000;
+}
+
+
+.menu-checkbox,
+.hamburger-menu {
+    display: none; 
+}
+
+
+
+/* ======================================= */
+/* ====== רספונסיביות - מובייל (עד 768px) ====== */
+/* ======================================= */
+@media screen and (max-width: 768px) {
+    
+    
+    .navbar {
+        height: 60px; /* גובה קטן יותר להכיל רק את ההמבורגר */
+        padding: 0;
+    }
+    
+    /* הכלל ul משתנה כדי להסתיר את הרשימה כברירת מחדל */
+    ul {
+        /* שינוי פריסה אנכית ומיקום */
+        flex-direction: column; 
+        align-items: stretch; 
+        text-align: center;
+        
+        /*  הסתרה כברירת מחדל  */
+        display: none !important; 
+        
+        /* הגדרות מיקום לתפריט הנפתח */
+        position: absolute;
+        top: 60px; /* מתחיל מתחת לניווט הראשי */
+        left: 0;
+        width: 100%;
+        background-color: rgb(133, 110, 43); /* רקע כהה לתפריט הנפתח */
+        z-index: 999;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+    }
+
+    /* -------------------------------------- */
+    /* ======== רכיבי המבורגר ופתיחה (חדש) ======== */
+    /* -------------------------------------- */
+
+    /* הצגת כפתור ההמבורגר ועיצובו */
+    .hamburger-menu {
+
+        display: flex !important; /*  הצג את ההמבורגר במובייל  */
+        flex-direction: column;
+        cursor: pointer;
+        position: absolute;
+        right: 15px; 
+        top: 15px; 
+        z-index: 1001; 
+    }
+   
+    
+    .hamburger-menu .bar {
+        width: 28px;
+        height: 3px;
+        background-color: white; /* צבע הקווים */
+        margin: 5px 0;
+        transition: 0.3s;
+    }
+
+    /* לוגיקת הפתיחה: הצגת הרשימה כאשר המתג מסומן */
+    #menu-toggle:checked ~ ul {
+        display: flex !important; /*  הצגת הרשימה  */
+    }
+
+    /*  אפקט X בעת פתיחה */
+    #menu-toggle:checked ~ .hamburger-menu .bar:nth-child(2) {
+        opacity: 0;
+    }
+    #menu-toggle:checked ~ .hamburger-menu .bar:nth-child(1) {
+        transform: rotate(45deg) translate(7px, 7px);
+    }
+    #menu-toggle:checked ~ .hamburger-menu .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+    
+    /* -------------------------------------- */
+    /* ======== עיצוב הקישורים הפתוחים במובייל ======== */
+    /* -------------------------------------- */
+    ul li {
+        display: block; 
+        margin: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        background-color: transparent; 
+        background-color: rgb(133, 110, 43);
+        
+    }
+    
+    ul li:last-child {
+        border-bottom: none;
+    }
+    ul li:hover {
+        /* אפקט ריחוף: הבהרה קלה על הרקע החום */
+        background-color: rgb(153, 130, 53); /* צבע מעט בהיר יותר בריחוף */
+    }
+
+    #nav_link {
+        font-size: 24px; /* גודל גופן קטן יותר במובייל */
+        display: block;
+        padding: 8px 0; 
+        margin: 0; 
+    }
+}

@@ -1,0 +1,117 @@
+
+table {
+ margin-top: 100px;
+margin: 100px auto 160px auto;
+ width:80%;
+ height: 500px;
+  border-collapse: collapse;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 18px;
+  table-layout: fixed; 
+  direction: rtl;
+  margin-bottom: 160px;
+  
+}
+
+#nav_link{
+  margin-top: -25px;
+
+}
+
+th {
+  background-color: #ac9433;
+  color: white;
+  padding: 12px;
+  height: 50px;
+ text-align: center;
+}
+
+td {
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+}
+
+tr:hover {
+  background-color: #f3e5f5;
+}
+#title{
+  margin-top: 130px;
+  text-align: center;
+  font-size: 100px;
+  color:#ac9433;
+  font-family:cursive
+}
+/* -------------------------------------- */
+/* ======== הכותרת העוטפת (P) ======== */
+/* -------------------------------------- */
+#order-btn {
+    text-align: center;
+    font-size: 30px; 
+    color: #333; /* צבע הטקסט "להזמנה" */
+    margin-top: 20px;
+    margin-bottom: 50px; 
+    display: flex; /* שימוש ב-flexbox כדי למרכז את הטקסט והכפתור יחד */
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* מרווח קטן בין הטקסט לכפתור */
+}
+
+/* -------------------------------------- */
+/* ======== הכפתור "לחצו כאן" (#link_here) ======== */
+/* -------------------------------------- */
+#link_here {
+    display: inline-block; 
+    padding: 8px 20px; /* ריווח פנימי לכפתור */
+    border-radius: 25px; 
+    text-decoration: none; 
+    font-size: 1em; 
+    font-weight: 700; /* מודגש וחזק */
+    cursor: pointer;
+    transition: all 0.3s ease; 
+    
+    background-color: #ac9433; 
+    color: #ffffff !important; 
+    
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+#link_here:hover {
+    background-color: #bb9c3e; 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+    color: #ffffff !important;
+}
+
+#link_here:active {
+    background-color: #9a862b; 
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    color: #ffffff !important;
+}
+/* ======================================= */
+/* ====== רספונסיביות - טאבלט ומובייל ====== */
+/* ======================================= */
+@media screen and (max-width: 768px) {
+    #title {
+    font-size: 60px;
+    margin-top: 200px; /* תשני לפי כמה רווח את רוצה */
+}
+
+
+    /* התאמות לטבלה */
+  
+    table {
+        width: 95%;
+        margin: 0 auto;
+        table-layout: fixed;
+    }
+
+
+    
+    th, td {
+        min-width: 120px; /* רוחב מינימלי לקריאות טובה */
+        padding: 8px;
+    }
+}

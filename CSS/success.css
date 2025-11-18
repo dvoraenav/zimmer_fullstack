@@ -1,0 +1,66 @@
+
+body {
+    
+    background-color: rgb(235, 230, 215); /* צבע בז' בהיר */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+
+/* -------------------------------------- */
+/* ======== מלבן האישור המרכזי ======== */
+/* -------------------------------------- */
+.success-container {
+    width: 90%;
+    max-width: 500px;
+    padding: 40px;
+    border-radius: 12px;
+    
+    
+    background-color: #ac9433; 
+    
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+/* -------------------------------------- */
+/* ======== כותרת וטקסט ======== */
+/* -------------------------------------- */
+.success-container h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.success-container p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* -------------------------------------- */
+/* ======== כפתור חזרה לדף הבית ======== */
+/* -------------------------------------- */
+.home-button {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    
+ 
+    background-color: #8c7929; 
+    color: #ffffff;
+    border: 2px solid #8c7929;
+}
+
+.home-button:hover {
+    background-color: #7a6a24;
+}

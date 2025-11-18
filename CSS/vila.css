@@ -1,0 +1,25 @@
+#vila{
+    text-align: center;
+    font-size: 70px;
+   margin-bottom: 50px;
+    margin-top: 140px; 
+}
+
+
+#des{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 70px;
+    font-weight: bold;
+}
+
+/* ======================================= */
+/* ====== רספונסיביות - מובייל (עד 768px) ====== */
+/* ======================================= */
+@media screen and (max-width: 768px) {
+    #vila {
+     
+        margin-top: 150px; 
+        
+    }
+}
